@@ -45,8 +45,6 @@ CRI-O supports any ![OCI compatible runtime](https://github.com/opencontainers/r
 
 The ![containers/storage](https://github.com/containers/storage) library is used for managing layers and creating root file-systems for the containers in a pod: `Overlayfs`, `devicemapper`, `AUFS` and `btrfs` are implemented, with `Overlayfs` as the default driver.
 
-Support for network based file system images (NFS, GlusterFS, CephFS) is on the development roadmap.
-
 ### Container images
 
 The ![containers/image](https://github.com/containers/image) library is used for pulling images from registries. Currently, it supports Docker ![schema 2/version 1](https://docs.docker.com/registry/spec/manifest-v2-1/) as well as ![schema 2/version 2](https://docs.docker.com/registry/spec/manifest-v2-2/). It also passes all Docker and Kubernetes tests.
