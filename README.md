@@ -17,24 +17,24 @@ CRI-O is developed by maintainers and contributors from these companies and othe
 The architectural components are as follows:
 
 - Kubernetes contacts the kubelet to launch a pod.
-      - Pods are a kubernetes concept consisting of one or more containers sharing the same IPC, NET and PID 'namespaces' and living in the same cgroup.
+      - Pods are a kubernetes concept consisting of one or more containers sharing the same IPC, NET and PID `namespaces` and living in the same cgroup.
 - The kubelet forwards the request to the CRI-O daemon VIA kubernetes CRI (Container runtime interface) to launch the new POD.
-- CRI-O uses the 'containers/image' library to pull the image from a container registry.
+- CRI-O uses the `containers/image` library to pull the image from a container registry.
 - The downloaded image is unpacked into the container’s root filesystems, stored in COW file systems, using containers/storage library.
-- After the rootfs has been created for the container, CRI-O generates an OCI runtime specification json file describing how to run    the container using the OCI Generate tools.
+- After the rootfs has been created for the container, CRI-O generates an OCI runtime specification json file describing how to run the container using the OCI Generate tools.
 - CRI-O then launches an OCI Compatible Runtime using the specification to run the container proceses. The default OCI Runtime is runc.
-- Each container is monitored by a separate 'conmon' process. The conmon process holds the pty of the PID1 of the container process. It handles logging for the container and records the exit code for the container process.
+- Each container is monitored by a separate `conmon` process. The conmon process holds the pty of the PID1 of the container process. It handles logging for the container and records the exit code for the container process.
 - Networking for the pod is setup through use of ![CNI](https://github.com/containernetworking/cni), so any CNI plugin can be used with CRI-O.
 
 # Components
 
 CRI-O is made up of several components that are found in different GitHub repositories.
 
-    - [OCI compatible runtime](https://github.com/opencontainers/runtime-tools)
-    - [containers/storage](https://github.com/containers/storage)
-    - [containers/image]https://github.com/containers/image()
-    - [networking (CNI)](https://github.com/containernetworking/cni)
-    - [container monitoring (conmon)](https://github.com/containers/conmon)
+    - [OCI compatible runtime](# OCI compatible runtimes)
+    - [containers/storage](# Storage)
+    - [containers/image](# Container images)
+    - [networking (CNI)](# Networking)
+    - [container monitoring (conmon)](# Monitoring)
     - security is provided by several core Linux capabilities
 
 # OCI compatible runtimes
