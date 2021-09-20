@@ -29,32 +29,32 @@ The architectural components are as follows:
 # Components
 
 CRI-O is made up of several components that are found in different GitHub repositories.
-    - [OCI compatible runtime](# OCI compatible runtimes)
-    - [containers/storage](# Storage)
-    - [containers/image](# Container images)
-    - [networking (CNI)](# Networking)
-    - [container monitoring (conmon)](# Monitoring)
-    - security is provided by several core Linux capabilities
+    - ![OCI compatible runtime](# OCI compatible runtimes)
+    - ![containers/storage](# Storage)
+    - ![containers/image](# Container images)
+    - ![networking (CNI)](# Networking)
+    - ![container monitoring (conmon)](# Monitoring)
+    - Security is provided by several core Linux capabilities
 
-# OCI compatible runtimes
+## OCI compatible runtimes
 
 CRI-O supports any ![OCI compatible runtime](https://github.com/opencontainers/runtime-tools). We test with runc and Clear Containers today.
 
-# Storage
+## Storage
 
 The ![containers/storage](https://github.com/containers/storage) library is used for managing layers and creating root file-systems for the containers in a pod: `Overlayfs`, `devicemapper`, `AUFS` and `btrfs` are implemented, with `Overlayfs` as the default driver.
 
 Support for network based file system images (NFS, GlusterFS, CephFS) is on the development roadmap.
 
-# Container images
+## Container images
 
 The ![containers/image](https://github.com/containers/image) library is used for pulling images from registries. Currently, it supports Docker ![schema 2/version 1](https://docs.docker.com/registry/spec/manifest-v2-1/) as well as ![schema 2/version 2](https://docs.docker.com/registry/spec/manifest-v2-2/). It also passes all Docker and Kubernetes tests.
 
-# Networking
+## Networking
 
 The Container Network Interface ![CNI](https://github.com/containernetworking/cni) is used for setting up networking for the pods. Various CNI plugins such as Flannel, Weave and OpenShift-SDN have been tested with CRI-O and are working as expected.
 
-# Monitoring
+## Monitoring
 
 ![conmon](https://github.com/cri-o/cri-o/tree/master/conmon) is a utility within CRI-O that is used to monitor the containers, handle logging from the container process, serve attach clients and detects Out Of Memory (OOM) situations.
 
