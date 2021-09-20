@@ -8,7 +8,7 @@ CRI-O supports OCI container images and can pull from any container registry. It
 
 ![Contributors](https://user-images.githubusercontent.com/65653459/134026544-8a5768ff-1cfa-4f17-823b-41b26531adbc.PNG)
 
-CRI-O is developed by maintainers and contributors from these companies and others. It is a community-driven, open source project. Feedback, users, and of course, contributors, are always welcome via the ![cri-o/cri-o](https://github.com/cri-o/cri-o) GitHub project.
+CRI-O is developed by maintainers and contributors from these companies and others. It is a community-driven, open source project. Feedback, users, and of course, contributors, are always welcome via the [cri-o/cri-o](https://github.com/cri-o/cri-o) GitHub project.
 
 # Architecture
 
@@ -30,12 +30,12 @@ The architectural components are as follows:
 
 CRI-O is made up of several components that are found in different GitHub repositories.
 
-    * ![OCI compatible runtime](https://github.com/opencontainers/runtime-tools)
-    * ![containers/storage](https://github.com/containers/storage)
-    * ![containers/image]https://github.com/containers/image()
-    * ![networking (CNI)](https://github.com/containernetworking/cni)
-    * ![container monitoring (conmon)](https://github.com/containers/conmon)
-    * security is provided by several core Linux capabilities
+    - [OCI compatible runtime](https://github.com/opencontainers/runtime-tools)
+    - [containers/storage](https://github.com/containers/storage)
+    - [containers/image]https://github.com/containers/image()
+    - [networking (CNI)](https://github.com/containernetworking/cni)
+    - [container monitoring (conmon)](https://github.com/containers/conmon)
+    - security is provided by several core Linux capabilities
 
 # OCI compatible runtimes
 
@@ -43,7 +43,7 @@ CRI-O supports any ![OCI compatible runtime](https://github.com/opencontainers/r
 
 # Storage
 
-The ![containers/storage](https://github.com/containers/storage) library is used for managing layers and creating root file-systems for the containers in a pod: 'Overlayfs', 'devicemapper', 'AUFS' and 'btrfs' are implemented, with 'Overlayfs' as the default driver.
+The ![containers/storage](https://github.com/containers/storage) library is used for managing layers and creating root file-systems for the containers in a pod: `Overlayfs`, `devicemapper`, `AUFS` and `btrfs` are implemented, with `Overlayfs` as the default driver.
 
 Support for network based file system images (NFS, GlusterFS, CephFS) is on the development roadmap.
 
