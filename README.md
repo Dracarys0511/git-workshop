@@ -39,7 +39,7 @@ CRI-O is made up of several components that are found in different GitHub reposi
 
 ### OCI compatible runtimes
 
-CRI-O supports any ![OCI compatible runtime](https://github.com/opencontainers/runtime-tools). We test with runc and Clear Containers today.
+CRI-O supports any ![OCI compatible runtime](https://github.com/opencontainers/runtime-tools). They test with runc and Clear Containers today.
 
 ### Storage
 
