@@ -29,12 +29,13 @@ The architectural components are as follows:
 # Components
 
 CRI-O is made up of several components that are found in different GitHub repositories.
-    - ![OCI compatible runtime](# OCI compatible runtimes)
-    - ![containers/storage](# Storage)
-    - ![containers/image](# Container images)
-    - ![networking (CNI)](# Networking)
-    - ![container monitoring (conmon)](# Monitoring)
-    - Security is provided by several core Linux capabilities
+
+   - ![OCI compatible runtime](# OCI compatible runtimes)
+   - ![containers/storage](# Storage)
+   - ![containers/image](# Container images)
+   - ![networking (CNI)](# Networking)
+   - ![container monitoring (conmon)](# Monitoring)
+   - Security is provided by several core Linux capabilities
 
 ## OCI compatible runtimes
 
